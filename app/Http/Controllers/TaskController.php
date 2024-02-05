@@ -26,7 +26,7 @@ class TaskController extends Controller
         $task = Task::create([
             'title' => $request->title,
             'description' => $request->description,
-            'completed' => $request->completed,
+            'completed' => $request->completed ?: false,
         ]);
 
         return new TaskResource($task);
@@ -49,7 +49,7 @@ class TaskController extends Controller
 
         $task->title = $request->title;
         $task->description = $request->description;
-        $task->completed = $request->completed;
+        $task->completed = $request->completed ?: false;
 
         return $task->save();
     }
