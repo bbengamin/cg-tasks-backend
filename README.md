@@ -4,6 +4,11 @@
 
 ### Run the application locally
 ```sh
+cp .env.example .env
+```
+Fill variables in the .env file 
+
+```sh
 docker-compose up -d
 ```
 
