@@ -16,6 +16,10 @@ docker-compose up -d
 ```sh
 php artisan migrate --seed
 ```
+or
+```sh
+docker-compose exec laravel.test php artisan migrate:fresh --seed --force
+```
 
 ### Generate Postman collection
 ```sh
